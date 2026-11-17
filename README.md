@@ -32,10 +32,9 @@ Todos os ficheiros produzidos (diagramas, imagens, código HTML/CSS) devem estar
 
 ```text
 Tarefa_3.1b/
-├── docs/                  # Documentação e planeamento das entidades
-├── design/
-│   ├── wireframes/        # Ficheiros e exportações (Browser e Mobile)
-│   └── mockups/           # Ficheiros e exportações (Browser e Mobile)
+├── docs/design            # Documentação e planeamento das entidades
+│          ├── wireframes/        # Ficheiros e exportações (Browser e Mobile)
+│          └── mockups/           # Ficheiros e exportações (Browser e Mobile)
 ├── src/                   # Código-fonte HTML5 do protótipo de Back-office
 └── README.md              # Este ficheiro
 ```
