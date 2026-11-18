@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Animalec — Gestão de Patrocinadores">
+  <title>Gestão de Patrocinadores · Animalec</title>
+  <link rel="icon" href="animalec.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CLato:400,700&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animalec.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header id="app-header"></header>
+
+  <main id="conteudo" class="page-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <section class="col-12 col-lg-10" aria-labelledby="page-title">
+          <header class="page-header">
+            <h1 id="page-title" class="page-section-heading">Gestão de Patrocinadores</h1>
+            <div class="divider-custom" aria-hidden="true">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+              <div class="divider-custom-line"></div>
+            </div>
+          </header>
+
+          <nav class="page-actions" aria-label="Ações da página">
+            <a class="btn btn-outline-success" href="sponsor_form.html">
+              <i class="fas fa-plus-square" aria-hidden="true"></i> Adicionar Patrocinador
+            </a>
+            <a class="btn btn-outline-info" href="index.html">
+              <i class="fas fa-bars" aria-hidden="true"></i> Menu Principal
+            </a>
+          </nav>
+
+          <p id="record-count" class="text-muted" aria-live="polite"></p>
+
+          <!-- Versão Web: tabela -->
+          <table class="table table-striped d-none d-md-table">
+            <caption class="sr-only">Lista de patrocinadores</caption>
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" id="sort-header" aria-sort="ascending">
+                  <button type="button" class="sort-button" id="sort-button">
+                    Nome<i class="fas fa-arrow-up" aria-hidden="true"></i>
+                    <span class="sr-only">(ordenar)</span>
+                  </button>
+                </th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Email</th>
+                <th scope="col">Nº Animais</th>
+                <th scope="col">Ativo</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="records-table-body"></tbody>
+          </table>
+
+          <!-- Versão Mobile: cartões -->
+          <section id="records-cards" class="d-md-none" aria-label="Lista de patrocinadores"></section>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="app-footer" class="footer"></footer>
+
+  <!-- Modal "Ver" -->
+  <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="details-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="details-modal-title">Detalhes do Patrocinador</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <dl class="row details-list" id="details-list"></dl>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/sponsors.js"></script>
+</body>
+</html>

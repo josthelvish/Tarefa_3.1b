@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Animalec — Adicionar ou editar especialista">
+  <title>Adicionar Especialista · Animalec</title>
+  <link rel="icon" href="animalec.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CLato:400,700&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animalec.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header id="app-header"></header>
+
+  <main id="conteudo" class="page-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <section class="col-12 col-lg-8" aria-labelledby="page-title">
+          <header class="page-header">
+            <h1 id="page-title" class="page-section-heading">Adicionar Especialista</h1>
+            <div class="divider-custom" aria-hidden="true">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+              <div class="divider-custom-line"></div>
+            </div>
+          </header>
+
+          <form id="expert-form" class="entity-form">
+            <p class="text-muted small">Os campos assinalados com <span class="required-mark">*</span> são obrigatórios.</p>
+
+            <fieldset>
+              <legend>Dados gerais</legend>
+              <div class="form-group">
+                <label for="expert-name">Nome <span class="required-mark" aria-hidden="true">*</span></label>
+                <input type="text" class="form-control form-control-lg" id="expert-name" name="name"
+                       placeholder="Nome do especialista" maxlength="100" required>
+              </div>
+              <div class="form-group">
+                <label for="expert-group">Grupo animal <span class="required-mark" aria-hidden="true">*</span></label>
+                <select class="custom-select custom-select-lg" id="expert-group" name="group" required
+                        aria-describedby="expert-group-help">
+                  <option value="">-- Seleciona o grupo --</option>
+                  <option value="anfibio">Anfíbio</option>
+                  <option value="ave">Ave</option>
+                  <option value="mamifero">Mamífero</option>
+                  <option value="peixe">Peixe</option>
+                  <option value="reptil">Réptil</option>
+                </select>
+                <small id="expert-group-help" class="form-text text-muted">Todos os animais deste grupo ficam associados ao especialista.</small>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="expert-degree">Grau académico</label>
+                  <input type="text" class="form-control form-control-lg" id="expert-degree" name="degree"
+                         placeholder="Ex.: Doutoramento em Biologia">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="expert-institution">Instituição</label>
+                  <input type="text" class="form-control form-control-lg" id="expert-institution" name="institution"
+                         placeholder="Ex.: Universidade Aberta">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="expert-description">Descrição</label>
+                <textarea class="form-control" id="expert-description" name="description" rows="3"
+                          placeholder="Breve nota biográfica"></textarea>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="expert-active" name="active" checked>
+                <label class="custom-control-label" for="expert-active">Ativo</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Contacto</legend>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="expert-email">Email</label>
+                  <input type="email" class="form-control form-control-lg" id="expert-email" name="email"
+                         placeholder="nome@exemplo.pt" autocomplete="email">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="expert-phone">Telefone</label>
+                  <input type="tel" class="form-control form-control-lg" id="expert-phone" name="phone"
+                         placeholder="+351 000 000 000" autocomplete="tel">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Localização</legend>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="expert-city">Cidade</label>
+                  <input type="text" class="form-control form-control-lg" id="expert-city" name="city">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="expert-district">Distrito</label>
+                  <input type="text" class="form-control form-control-lg" id="expert-district" name="district">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="expert-country">País</label>
+                  <input type="text" class="form-control form-control-lg" id="expert-country" name="country" value="Portugal">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Links</legend>
+              <div class="form-row align-items-center">
+                <div class="form-group col-md-9">
+                  <label for="expert-photo">Foto (URL)</label>
+                  <input type="url" class="form-control form-control-lg" id="expert-photo" name="photo"
+                         placeholder="https://…/foto.jpg">
+                </div>
+                <figure class="image-preview is-round col-md-3">
+                  <img id="photo-preview-img" src="data:," alt="Foto do especialista" hidden>
+                  <span id="photo-preview-placeholder" class="preview-placeholder" aria-hidden="true">?</span>
+                  <figcaption>Pré-visualização</figcaption>
+                </figure>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="expert-website">Website</label>
+                  <input type="url" class="form-control form-control-lg" id="expert-website" name="website"
+                         placeholder="https://www.exemplo.pt">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="expert-orcid">ORCID</label>
+                  <input type="text" class="form-control form-control-lg" id="expert-orcid" name="orcid"
+                         placeholder="0000-0000-0000-0000" pattern="\d{4}-\d{4}-\d{4}-\d{3}[\dX]"
+                         title="Formato: 0000-0000-0000-0000" aria-describedby="orcid-help">
+                  <small id="orcid-help" class="form-text text-muted">Identificador de investigador (16 dígitos).</small>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- "Animais do grupo" — só leitura, só na edição -->
+            <section id="group-animals" class="group-animals mb-4" aria-labelledby="group-animals-title" aria-live="polite" hidden>
+              <h2 id="group-animals-title">Animais do grupo</h2>
+              <ul id="group-animal-list" class="group-animal-list"></ul>
+              <p class="note">Não há associação manual: todos os animais deste grupo ficam associados ao especialista. Ao mudar o grupo, a lista atualiza.</p>
+            </section>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-outline-success btn-lg" id="submit-button">
+                <i class="fas fa-save" aria-hidden="true"></i> <span id="submit-label">Adicionar</span>
+              </button>
+              <a class="btn btn-outline-danger btn-lg" href="experts.html">
+                <i class="fas fa-times" aria-hidden="true"></i> Cancelar
+              </a>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="app-footer" class="footer"></footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/experts.js"></script>
+</body>
+</html>

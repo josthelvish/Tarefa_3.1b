@@ -27,15 +27,11 @@ Para cada uma das entidades (**Sponsors** e **Experts**), devem ser desenvolvido
 
 ---
 
-### 📁 Estrutura de Entrega (Git)
-Todos os ficheiros produzidos (diagramas, imagens, código HTML/CSS) devem estar organizados neste repositório (`Tarefa_3.1b`).
+### Testes 
 
-```text
-Tarefa_3.1b/
-├── docs/design            # Documentação e planeamento das entidades
-│          ├── wireframes/        # Ficheiros e exportações (Browser e Mobile)
-│          └── mockups/           # Ficheiros e exportações (Browser e Mobile)
-├── src/                   # Código-fonte HTML5 do protótipo de Back-office
-└── README.md              # Este ficheiro
-```
+[Testes do protótipo HTML5 — Back-office Animalec](TESTES.md)
+
+### Notas 
+
+Para verificar o funcionamento do Back-office, validei as cinco páginas no validador oficial do W3C (Nu Html Checker), sem erros nem avisos, e testei a navegação e a visualização das novas entidades (Patrocinadores e Especialistas) entre os vários blocos da aplicação, nas versões Web e Mobile: listagem, ordenação, consulta de detalhes, adição, edição, remoção, associação de animais e validação dos formulários. Declaro ter recorrido a ferramentas de Inteligência Artificial para gerar os dados de teste utilizados.
 
