@@ -33,5 +33,5 @@ Para cada uma das entidades (**Sponsors** e **Experts**), devem ser desenvolvido
 
 ### Notas 
 
-Para verificar o funcionamento do Back-office, validei as cinco páginas no validador oficial do W3C (Nu Html Checker), sem erros nem avisos, e testei a navegação e a visualização das novas entidades (Patrocinadores e Especialistas) entre os vários blocos da aplicação, nas versões Web e Mobile: listagem, ordenação, consulta de detalhes, adição, edição, remoção, associação de animais e validação dos formulários. Declaro ter recorrido a ferramentas de Inteligência Artificial para gerar os dados de teste utilizados.
+Para verificar o funcionamento do Back-office, validei as cinco páginas no validador oficial do W3C (Nu Html Checker), sem erros nem avisos, e testei a navegação e a visualização das novas entidades (Patrocinadores e Especialistas) entre os vários blocos da aplicação, nas versões Web e Mobile: listagem, ordenação, consulta de detalhes, adição, edição, remoção, associação de animais e validação dos formulários. Declaro ter recorrido a ferramentas de Inteligência Artificial para gerar os dados de teste utilizados, bem como produzir os wireframes e protótipos na plataforma FIGMA.
 
